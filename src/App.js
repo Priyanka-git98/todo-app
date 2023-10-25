@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 // import Axios from './components/Axios';
 import Axiospost from './components/Axiospost';
+import MyForm from './components/Forms';
 
 // import Todo from './components/Todo';
 
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       {/* <Todo/> */}
       {/* <Axios/> */}
-      <Axiospost/>
+      {/* <Axiospost/> */}
+      <MyForm/>
     </div>
   );
 }
