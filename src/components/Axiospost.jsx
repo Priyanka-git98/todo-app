@@ -17,6 +17,23 @@ function Axiospost() {
             console.log(response)
         })
     }
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        axios.put("https://jsonplaceholder.typicode.com/users/1", inputData)
+        .then((response) =>{
+            console.log(response)
+        })
+    }
+
+    const handleDelete = (e) => {
+        e.preventDefault();
+        axios.delete("https://jsonplaceholder.typicode.com/users/1")
+        .then((response) =>{
+            console.log(response)
+        })
+    }
+
   return (
     <div>
         <label>first name:</label>
@@ -25,6 +42,8 @@ function Axiospost() {
         <input type="text" name="lastName" value={inputData.lastName} onChange={handleData}></input>
 
         <button onClick={handleSubmit}>submit</button>
+        <button onClick={handleUpdate}>Update</button>
+        <button onClick={handleDelete}>Delete</button>
     </div>
   )
 }
